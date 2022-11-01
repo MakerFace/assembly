@@ -1,6 +1,6 @@
 
 
-section   .text
+segment   .text
 global _start ;declare for linker(ld)
 
 
