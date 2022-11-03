@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "github": "https://github.com/meeran03/assembly-vscode",
+  "configurations": [
+    {
+      "type": "gdb",
+      "request": "launch",
+      "name": "GDB64",
+      "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
+      "stopOnEntry": false,
+      "preLaunchTask": "LINK"
+    }
+  ]
+}

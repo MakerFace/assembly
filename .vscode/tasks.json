@@ -1,0 +1,47 @@
+{
+  "version": "2.0.0",
+  "github": "https://github.com/meeran03/assembly-vscode",
+  "tasks": [
+    {
+      "label": "build-ASMwithCPP",
+      "command": "nasm",
+      "args": [
+        "-f",
+        "elf",
+        "-F",
+        "dwarf",
+        "-g",
+        "${file}",
+        "-o",
+        "${workspaceFolder}/obj/${fileBasenameNoExtension}.o"
+      ]
+    },
+    {
+      "label": "LINK",
+      "command": "ld",
+      "args": [
+        "-m",
+        "elf_i386",
+        "-o",
+        "${workspaceFolder}/bin/${fileBasenameNoExtension}",
+        "${workspaceFolder}/obj/${fileBasenameNoExtension}.o"
+      ],
+      "dependsOn": ["build-ASMwithCPP"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": {
+        "pattern": {
+          "regexp": "error"
+        }
+      },
+      "presentation": {
+        "focus": true,
+        "panel": "dedicated",
+        "reveal": "silent",
+        "clear": true
+      }
+    }
+  ]
+}
