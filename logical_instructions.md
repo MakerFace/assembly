@@ -18,7 +18,7 @@ and bl,0x0f
 检查一个数是否是偶数，与`0x1`。
 ```assembly
 and al,0x1
-jz  done
+jz  even_number
 ```
 
 # or
@@ -29,6 +29,11 @@ jz  done
 or op1,op2
 ```
 
+可用于设置一个或多个位。例如设置四个低位：
+```assembly
+or bl, 0fh
+```
+
 # xor
 
 按位异或：
@@ -37,6 +42,13 @@ or op1,op2
 xor op1,op2
 ```
 
+用于清除寄存器：
+```assembly
+xor eax,eax
+```
+
 # test
+
+test指令与and指令操作作用相同，但是不改变第一个操作数。
 
 # not
