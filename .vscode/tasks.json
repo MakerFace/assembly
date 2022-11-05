@@ -14,7 +14,13 @@
         "${file}",
         "-o",
         "${workspaceFolder}/obj/${fileBasenameNoExtension}.o"
-      ]
+      ],
+      "presentation": {
+        "focus": false,
+        "reveal": "silent",
+        "revealProblems": "onProblem",
+        "clear": false
+      }
     },
     {
       "label": "LINK",
@@ -22,9 +28,12 @@
       "args": [
         "-m",
         "elf_i386",
+        "-dynamic-linker",
+        "/lib/ld-linux.so.2",
         "-o",
         "${workspaceFolder}/bin/${fileBasenameNoExtension}",
-        "${workspaceFolder}/obj/${fileBasenameNoExtension}.o"
+        "${workspaceFolder}/obj/${fileBasenameNoExtension}.o",
+        "-lc"
       ],
       "dependsOn": ["build-ASMwithCPP"],
       "group": {
@@ -37,10 +46,10 @@
         }
       },
       "presentation": {
-        "focus": true,
-        "panel": "dedicated",
+        "focus": false,
         "reveal": "silent",
-        "clear": true
+        "revealProblems": "onProblem",
+        "close": false
       }
     }
   ]
