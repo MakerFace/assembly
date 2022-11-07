@@ -35,10 +35,11 @@
       ```
 
    2. 使用 `gcc`
-   
+
       ```bash
       gcc -m32 obj/main.o -o bin/main
       ```
+
       没成功，报了`_start`重定义的错。
 
 3. 调试
@@ -62,3 +63,56 @@
 # 寻址模式
 
 [addressing modes](addressing_modes.md)
+
+# 变量和常量
+
+[variables&constant](variables%26constant.md)
+
+# 算术指令
+
+[arithmetic](arithmetic.md)
+
+# 逻辑指令
+
+[logical instructions](logical_instructions.md)
+
+# 条件
+
+[conditions](conditions.md)
+
+# 循环
+
+[loop](loop.md)
+
+# 数字
+
+[numbers](numbers.md)
+
+# 字符串
+
+[string](string.md)
+
+# 数组
+
+[array](arrays.md)
+
+# 程序
+
+[Procedures](procedures.md)
+
+# 文件管理
+
+[file](file.md)
+
+# 内存管理
+
+[memory](memory.md)
+
+
+# 一些代码
+
+[x86汇编代码](https://cs.lmu.edu/~ray/notes/x86assembly/)
+
+# 教程
+
+[汇编指南](https://www.tutorialspoint.com/assembly_programming/assembly_quick_guide.htm)
